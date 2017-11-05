@@ -1,0 +1,34 @@
+div{
+    text-align:center;
+}
+h2{
+    color: #6da85b; 
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+}
+label{
+    color: #6da85b; 
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    display: inline-block;
+}
+button{
+    background-color: #6da85b;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+
+button:hover{
+    background-color: #7da182;
+    color: white; 
+    cursor: pointer;
+}
+
+input{
+    color: #275f14; 
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
