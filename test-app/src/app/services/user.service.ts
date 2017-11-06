@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import 'rxjs/Rx';
 
 
 
@@ -69,7 +70,11 @@ export class UserService{
     }
     
 
-    
-
+    addUserWithNewId(user:User):Observable<User>{
+        return this.getUsers().flatMap((users: User[]) => {
+                let newId =  users[users.length-1].id+1; user.id = newId;  
+                return this.addUser(user);
+         });
+    }
     
 }
