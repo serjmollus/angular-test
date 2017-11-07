@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/primeng/resources/themes/kasper/theme.scss";
+
+.classLabelRight{
+    @extend .col-lg-6;
+    text-align: right;
+}
+
+
+.classLabelCenter{
+    @extend .col-lg-12;
+    text-align: center;
+}
+
+

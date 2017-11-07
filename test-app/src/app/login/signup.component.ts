@@ -3,7 +3,7 @@ import { UserService } from '../services/user.service';
 import { User } from '../persistence/user';
 import { Router } from '@angular/router';
 
-
+declare var swal: any;
 
 @Component({
     selector: 'signup',
@@ -20,13 +20,12 @@ export class SignupComponent{
 
     submitInfo(){
         if (this.name === undefined || this.alias === undefined || this.password === undefined){
-            alert("All fields are required");
+            swal("Sign up error", "All fields are required", "warning");
         }
         else{
-            console.log("vamos palla");
             let user = new User(-1, this.name, this.alias, this.password);
             this.userService.addUserWithNewId(user).subscribe(res => {
-                    alert("User created successfully"); 
+                    swal("Sign Up", "esoUser created successfully","success"); 
                     this.router.navigate(['/login']);
                 }
             );

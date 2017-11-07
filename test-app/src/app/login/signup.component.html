@@ -1,8 +1,42 @@
-<div>
-<h2>Please fill the form</h2>
-<div><label><b>Name: </b></label><input [(ngModel)]="name" placeholder=""></div>
-<div><label><b>Mail: </b></label><input [(ngModel)]="alias" placeholder=""></div>
-<div><label><b>Password: </b></label><input [(ngModel)]="password" placeholder=""></div>
+<div class="container">
+<br><br><br><br>
+<div class="row">
+    <div class="classLabelCenter">
+        <label><b>PLEASE FILL THE FORM</b></label>
+    </div>
+</div>
 <br>
-<button (click)="submitInfo()">Submit</button>
+<div class="row">
+    <div class="classLabelRight">
+        <label><b>Name:</b></label>
+    </div> 
+    <div class="col-lg-6">
+        <input [(ngModel)]="name" placeholder="">
+    </div>  
+</div>
+
+<div class="row">
+    <div class="classLabelRight">
+        <label><b>Mail:</b></label>
+    </div> 
+    <div class="col-lg-6">
+        <input [(ngModel)]="alias" placeholder="">
+    </div>  
+</div>
+
+<div class="row">
+    <div class="classLabelRight">
+        <label><b>Password:</b></label>
+    </div> 
+    <div class="col-lg-6">
+        <input type="password" [(ngModel)]="password" (keyup.enter)="onEnter()" placeholder="">
+    </div>  
+</div> 
+<br>
+<div class="row">
+    <div class="classLabelCenter">
+        <button (click)="submitInfo()"><b>Submit</b></button>
+    </div>
+</div>
+
 </div>

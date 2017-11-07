@@ -1,4 +1,8 @@
-
+label{
+    color: #1C295B; 
+    display: inline-block;
+    font-size: 20px;
+}
 button{
     background-color: #1C295B;
     border: none;
@@ -10,11 +14,6 @@ button{
     font-size: 15px;
     border-radius: 4px;
 }
-label{
-    color: #1C295B; 
-    display: inline-block;
-    font-size: 20px;
-}
 
 button:hover{
     background-color: lightgrey;
@@ -23,5 +22,10 @@ button:hover{
 }
 
 input{
+    color: #1C295B; 
+}
+
+a{
+    text-decoration: none;
     color: #1C295B; 
 }

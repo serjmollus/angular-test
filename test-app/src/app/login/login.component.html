@@ -1,9 +1,38 @@
-<div >
-<h2>Please login</h2>
-<div><label><b>Alias:</b></label> <input [(ngModel)]="alias" placeholder=""></div>
-<div><label><b>Password:</b></label> <input [(ngModel)]="password" placeholder=""></div>
+<div class="container">
+<br><br><br><br>
+<div class="row">
+    <div class="classLabelCenter">
+        <label><b>PLEASE LOGIN</b></label>
+    </div>
+</div>
 <br>
-<div><button (click)="doLogin()">Enter</button></div>
+<div class="row">
+    <div class="classLabelRight">
+        <label><b>Alias:</b></label>
+    </div> 
+    <div class="col-lg-6">
+        <input [(ngModel)]="alias" placeholder="">
+    </div>  
+</div>
+
+<div class="row">
+    <div class="classLabelRight">
+        <label><b>Password:</b></label>
+    </div> 
+    <div class="col-lg-6">
+        <input type="password" [(ngModel)]="password" (keyup.enter)="onEnter()" placeholder="">
+    </div>  
+</div> 
 <br>
-<div><a routerLink="/signup">Sign Up</a></div>
+<div class="row">
+    <div class="classLabelCenter">
+        <button (click)="doLogin()"><b>Enter</b></button>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="classLabelCenter">
+        <a routerLink="/signup">Sign Up</a>
+    </div>
+</div>
 </div>

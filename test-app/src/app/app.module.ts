@@ -12,6 +12,8 @@ import { AppComponent } from './app.component';
 import { UserService } from './services/user.service';
 import { AuthGuard } from './security/auth-guard';
 import { SignupComponent } from './login/signup.component';
+import { PanelMenuModule, MenuModule, SharedModule} from 'primeng/primeng';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,11 @@ import { SignupComponent } from './login/signup.component';
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     AppRoutingModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    PanelMenuModule,
+    MenuModule,
+    SharedModule,
+    BrowserAnimationsModule
   ],
   providers: [ UserService, AuthGuard ] ,
   bootstrap: [AppComponent]

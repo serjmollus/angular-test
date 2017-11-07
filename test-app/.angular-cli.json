@@ -19,9 +19,14 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.scss",
+        "../node_modules/bootstrap/scss/bootstrap.scss",
+        "../node_modules/sweetalert2/dist/sweetalert2.css",
+        "../node_modules/primeng/resources/themes/cupertino/theme.scss",
+        "../node_modules/primeng/resources/primeng.min.css",
+        "../node_modules/font-awesome/css/font-awesome.min.css"
       ],
-      "scripts": [],
+      "scripts": ["../node_modules/sweetalert2/dist/sweetalert2.all.min.js"],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -54,7 +59,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "scss",
     "component": {}
   }
 }

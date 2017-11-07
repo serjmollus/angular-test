@@ -47,7 +47,7 @@ export class UserService{
                                                         console.log("Usuario encontrado "+userRetrieved);
                                                         if (userRetrieved===undefined){
                                                             console.log("No se encontró el usuario");
-                                                            alert("Usuario y/o password incorrectos");
+                                                            this.loginSource.next(undefined); 
                                                         }
                                                         else{
                                                             localStorage.setItem('userLogged',""+userRetrieved.id);

@@ -3,10 +3,11 @@ import { NgModel } from '@angular/forms';
 import { UserService } from '../services/user.service';
 
 
+
 @Component({
     selector: 'login',
     templateUrl: './login.component.html',
-    styleUrls: [ './login.component.css']
+    styleUrls: [ './login.component.scss']
 })
 
 export class LoginComponent{
@@ -20,4 +21,7 @@ export class LoginComponent{
         this.userService.userLogin(this.alias, this.password);
     }
 
+    onEnter(){
+        this.doLogin();
+    }
 } 
